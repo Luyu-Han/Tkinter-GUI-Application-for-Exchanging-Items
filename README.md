@@ -1,7 +1,8 @@
 # Tkinter-GUI-Application-for-Exchanging-Items
 In special periods such as material shortage, or to improve the utilization rate of idle items, an item exchange software with an interactive interface, which can connect to a local database, is designed based on Python Tkinter.
 ## 软件使用说明
-- 请将上述代码全部下载
+- 请将上述代码全部下载    
+*此外，需安装python tkinter，sqlite3*
 - 在首次使用该系统的设备上，运行init.py新建数据库：　　
     1. 点击“初始化数据库”；
     2. 初始化成功后，点击“启动程序”；（若点击“确定”，会退出系统）
@@ -10,18 +11,18 @@ In special periods such as material shortage, or to improve the utilization rate
 - 若非首次使用且无需初始化数据库，可直接运行main.py
 ## 文件目录
 -	lib
-GlobalVar：global GLOBALS_DICT
-sqliteDB：class ItemDB、UserDB、NewUserDB、AdminDB，实现数据库基本的增删改等功能
-  - manageDB：实现数据库相关操作的整合并提供接口
-  - windows：可能会复用的窗口界面位置、大小的函数
+    - GlobalVar.py：global GLOBALS_DICT
+    - sqliteDB.py：class ItemDB、UserDB、NewUserDB、AdminDB，实现数据库基本的增删改等功能
+    - manageDB.py：实现数据库相关操作的整合并提供接口
+    - windows.py：可能会复用的窗口界面位置、大小的函数
 -	Admin
-  - AFrame：实现AMenu中具体功能
-  - AMenu：管理员主界面菜单，设计上方工具栏等但不实现具体功能
-  - ARoot：连接交互界面与具体实现
+    - AFrame.py：实现AMenu中具体功能
+    - AMenu.py：管理员主界面菜单，设计上方工具栏等但不实现具体功能
+    - ARoot.py：连接交互界面与具体实现
 -	User
-  - UFrame：实现UMenu中具体功能
-  - UMenu：用户主界面菜单，设计上方工具栏等但不实现具体功能
-  - URoot：连接交互界面与具体实现
+    - UFrame.py：实现UMenu中具体功能
+    - UMenu.py：用户主界面菜单，设计上方工具栏等但不实现具体功能
+    - URoot.py：连接交互界面与具体实现
 -	Data：数据库文件
 - winLogin.py 除了管理员/普通用户系统界面外的初始化、登录、注册等界面
 - init.py 可直接运行的建立或初始化数据库的程序
